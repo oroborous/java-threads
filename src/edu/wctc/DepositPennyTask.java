@@ -10,5 +10,7 @@ public class DepositPennyTask implements Runnable {
     @Override
     public void run() {
         bankAccount.deposit(1);
+//        bankAccount.depositSyncMethod(1);
+//        bankAccount.depositSyncBlock(1);
     }
 }

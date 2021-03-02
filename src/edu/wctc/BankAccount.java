@@ -16,12 +16,17 @@ public class BankAccount {
         balance = newBalance;
     }
 
-    public void deposit2(int amount) {
+    public void depositSyncBlock(int amount) {
         synchronized (this) {
             int newBalance = balance + amount;
             balance = newBalance;
         }
         // other code that doesn't require synchronization
+    }
+
+    public synchronized void depositSyncMethod(int amount) {
+        int newBalance = balance + amount;
+        balance = newBalance;
     }
 
     public int getBalance() {

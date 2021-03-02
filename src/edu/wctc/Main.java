@@ -7,6 +7,20 @@ import java.util.concurrent.Executors;
 public class Main {
 
     public static void main(String[] args) {
+//        runSpammer();
+
+//        runSpammerTask();
+
+//        countdownTask();
+
+//        interruptTask();
+
+//        joiningThreads();
+
+//        fixedThreadPool();
+
+//        cachedThreadPool();
+
         for (int i = 0; i < 20; i++) {
             raceCondition();
         }
@@ -39,7 +53,8 @@ public class Main {
     }
 
     public static void fixedThreadPool() {
-        ExecutorService threadPool = Executors.newFixedThreadPool(1);
+        ExecutorService threadPool = Executors.newFixedThreadPool(3);
+//        ExecutorService threadPool = Executors.newFixedThreadPool(1);
         threadPool.execute(new CountdownTask(5));
         threadPool.execute(new CountdownTask(10));
         threadPool.execute(new CountdownTask(15));
